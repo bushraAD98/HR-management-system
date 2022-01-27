@@ -5,58 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="style.css">
+ 
 </head>
 <body>
+  <link rel="stylesheet" href="style.css">
   
-  <style>
-    .body{
-        min-height: 100vh;
-
-    }
-.nav {
-  display : flex;
-   justify-content : space-between ;
-  flex-direction : row;
-  margin : 20 px;
-  padding : 20 px;
-  width : 40 px;
-  text-aligh: center;
-}
-.footer{
-  position: sticky;
-  top:100%; 
-  text-align: center;
-margin-top:70%;
-}
-#paragraph{
-  padding: 50px;
-position: sticky;
- top: 100%; 
-margin-top: auto;
-width:100%;}
-
-    </style>
   <header>
     <nav class="nav">
       
-<a href="#"" > 
+<a href="index.html"" > 
   Home Page </a> 
 
    
-<a href="#"" > 
+<a href="accounting.html"" > 
   Accounting </a> 
   
       </nav>
   </header>
 
-  <main>
-<script src="app.js"> </script>
+  <main >
 <br> 
-<form>
+<form id="form">
   <label for="name"> Full Name </label>
   <input id="name"type="text">
-  <br> <br>
+  <br>
+   <label for="id"> Employee ID </label>
+  <input id="id"type="text">
+   <br>
   <label for="dep">Department:</label>
 
 <select name="Department" id="dep">
@@ -79,14 +54,15 @@ width:100%;}
   <label for="im"> Image url </label>
   <input id="im" type="text"> 
 <br>
-<button> Submit </button>
+<button id="btn" type="submit"> Submit </button> 
+<br>
 <br>
 <div id="employeediv">
 
 </div>
 
 
-
+<script src="app.js"> </script>
   </main>
 
   <footer class="footer">
