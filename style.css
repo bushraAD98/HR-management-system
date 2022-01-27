@@ -1,0 +1,38 @@
+label{
+    width : 240px;
+    display: inline-block;
+    text-align: right;
+  }
+  button{
+    margin-left: 240px;
+  }
+   .body{
+          min-height: 100vh;
+      }
+  .nav {
+    display : flex;
+     justify-content : space-between ;
+    flex-direction : row;
+    margin : 20 px;
+    padding : 20 px;
+    width : 40 px;
+    text-align: center;
+  }
+  .footer{
+    position: sticky;
+    top:100%; 
+    text-align: center;
+  margin-top:70%;
+  background-color: BF8B67;
+  
+  }
+  #paragraph{
+    padding: 50px;
+  position: sticky;
+   top: 100%; 
+  margin-top: auto;
+  width:100%;
+  border-bottom-style: solid 5px;
+  background-color: BF8B67;
+  }
+  
