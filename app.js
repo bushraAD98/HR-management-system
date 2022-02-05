@@ -39,8 +39,8 @@ return Math.floor(Math.random() * (2000 - 1500) ) + 1500; }
 else if(this.level == "Mid-Senior	"){
 return Math.floor(Math.random() * (1500 - 1000) ) + 1000;}
 else if(this.level == "Junior	"){
-return Math.floor(Math.random() * (1000 - 500) ) + 500;}
-this.salary = calcSalary();
+return Math.floor(Math.random() * (1000 - 500) ) + 500;
+}
 }
 console.log(lanaAli.calcSalary());
 
@@ -65,15 +65,15 @@ let salary = document.createElement("p")
 salary.textContent = "Salary : "+ this.calcSalary();
 employees.appendChild(salary);
 
-}
-
 for(let i=0;i<allEmployees.length;i++){
 
-   allEmployees[i].render;
- }
+  allEmployees[i].render;
+}
 
 
-function uniqeNum (){
+}
+
+Employee.prototype.uniqeNum = function (){
   return Math.floor(1000 + Math.random() * 9000);
   this.employeeId= uniqeNum();
 }
@@ -101,7 +101,9 @@ let im = event.target.im.value;
 console.log(im);
 this.salary = event.target.value;
 let newEmployee = new Employee (id,name,dep,level,im);
+newEmployee.calcSalary();
 newEmployee.render();
+
 
 
 }
