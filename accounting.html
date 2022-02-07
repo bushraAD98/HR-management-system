@@ -8,6 +8,33 @@
  
 </head>
 <body>
+  <style>
+#parent {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#parent td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#parent tr:nth-child(even){background-color: #f2f2f2;}
+
+#parent tr:hover {background-color: #ddd;}
+
+#parent th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+</style>
   <link rel="stylesheet" href="style.css">
 
  
@@ -25,11 +52,15 @@
   </header>
 
   <main>
+<div id="parent">
+<br> 
+ 
 
+</div>
  
 
 
-
+<script src="accounting.js"> </script>
   </main>
 
   <footer class="footer">
