@@ -14,22 +14,42 @@ function Employee(id, fullName, department, level, image) {
   this.level = level;
   this.salary = 0;
   this.imageUrl = image;
+  // this.calcSalary();
+  console.log(this);
   Employee.allEmployees.push(this);
 }
 
+Employee.prototype.calcSalary = function () {
+  if (this.level == "Senior") {
+    this.salary= Math.floor(Math.random() * (2000 - 1500)) + 1500;
+  }
+
+  if (this.level == "Mid-Senior") {
+    this.salary= Math.floor(Math.random() * (1500 - 1000)) + 1000;
+  }
+
+  if (this.level == "Junior") {
+    this.salary= Math.floor(Math.random() * (1000 - 500)) + 500;
+  }
+}
+
+
 let ghaziSameer = new Employee(1000, "Ghazi Sameer", "Administration", "Mid-Senior", "./assets/Ghazi.jpg");
+ghaziSameer.calcSalary();
 
 let lanaAli = new Employee(1001, "Lana Ali	", "Finance", "Senior", "./assets/Lana.jpg");
-
+lanaAli.calcSalary();
 let tmaraAyoub = new Employee(1002, " Tamara Ayoub	", "Marketing", "Senior", "./assets/Tamara.jpg");
-
+tmaraAyoub.calcSalary();
 let saifWalid = new Employee(1003, " Safi Walid", "Administration", "Mid-Senior", "./assets/Safi.jpg");
+saifWalid.calcSalary();
 let omarZaid = new Employee(1004, " Omar Zaid	", "Development", "Senior", "./assets/Omar.jpg");
-
+omarZaid.calcSalary();
 let ranaSaleh = new Employee(1005, "Rana Saleh	", "Development", "Junior", "./assets/Rana.jpg");
-
+ranaSaleh.calcSalary();
 let hadiAhmad = new Employee(1006, "Hadi Ahmad", "Finance", "Mid-Senior", "./assets/Hadi.jpg");
 // saveStorage();
+hadiAhmad.calcSalary();
 console.log(Employee.allEmployees);
 
 function saveStorage() {
@@ -53,20 +73,6 @@ function getStorage() {
   }
 
 
-}
-
-Employee.prototype.calcSalary = function () {
-  if (this.level == "Senior") {
-    return Math.floor(Math.random() * (2000 - 1500)) + 1500;
-  }
-
-  if (this.level == "Mid-Senior") {
-    return Math.floor(Math.random() * (1500 - 1000)) + 1000;
-  }
-
-  if (this.level == "Junior") {
-    return Math.floor(Math.random() * (1000 - 500)) + 500;
-  }
 }
 
 
@@ -104,7 +110,7 @@ Employee.prototype.render = function () {
 
 
   let salary = document.createElement("p")
-  salary.textContent = "Salary : " + this.calcSalary();
+  salary.textContent = "Salary : " + this.salary;
   employees.appendChild(salary);
 
 }
@@ -147,9 +153,9 @@ function handleSubmit(event) {
   console.log(level);
   let im = event.target.im.value;
   console.log(im);
-  this.salary = event.target.value;
+  // let salary = event.target.value;
   let newEmployee = new Employee(id, name, dep, level, im);
-
+newEmployee.calcSalary();
  
   saveStorage();
   newEmployee.render();
